@@ -1,0 +1,3 @@
+# config/cucumber.yml
+## YAML Template
+default: BROWSER=chrome -r features --format pretty
