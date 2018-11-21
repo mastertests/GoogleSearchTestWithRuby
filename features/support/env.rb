@@ -13,12 +13,12 @@ Selenium::WebDriver::Edge.driver_path = './drivers/MicrosoftWebDriver.exe'
 # Init driver
 Before do
   @browser = case browser
-               when 'chrome'
-                 Selenium::WebDriver.for :chrome
-               when 'edge'
-                 Selenium::WebDriver.for :edge
-               else
-                 Selenium::WebDriver.for :firefox
+             when 'chrome'
+               Selenium::WebDriver.for :chrome
+             when 'edge'
+               Selenium::WebDriver.for :edge
+             else
+               Selenium::WebDriver.for :firefox
              end
 end
 
