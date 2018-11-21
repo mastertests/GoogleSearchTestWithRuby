@@ -7,15 +7,14 @@ gem 'rubocop', require: false
 
 gem 'rails_helper'
 
-gem 'cucumber', '~> 4.0.0.rc.1'
+gem 'cucumber'
 
-gem 'capybara', '~> 3.11'
+gem 'capybara'
 
-gem 'selenium-webdriver', '~> 3.141'
+gem 'selenium-webdriver'
 
-gem 'cucumber-rails', '~> 1.0.6'
+gem 'cucumber-rails'
 
-gem 'spinach-rails', '~> 0.2.1'
+gem 'spinach-rails'
 
-gem 'pretty_face', '~> 0.10.3'
-
+gem 'pretty_face'

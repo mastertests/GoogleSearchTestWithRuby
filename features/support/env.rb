@@ -1,8 +1,7 @@
 require 'rubygems'
 require 'selenium-webdriver'
 
-main_page = 'http://www.google.com/'
-browser = 'chrome'
+browser = ENV['BROWSER'] || 'chrome'
 
 ## Creating WebDriver
 # Init path to drivers
@@ -19,14 +18,12 @@ Before do
   end
 end
 
-# Open url, go fullscreen and wait to be ready
+# Go fullscreen
 Before do
-  @browser.get main_page
   @browser.manage.window.maximize
-  @browser.manage.timeouts.implicit_wait = 20 # sec
 end
 
 # Reinit driver after each scenario
-After '@future' do
+After '@feature' do
   @browser.quit
 end
