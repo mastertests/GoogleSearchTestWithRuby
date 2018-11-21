@@ -21,4 +21,5 @@ Or install it yourself as if you are 'smart':
 ## Contributing
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/mastertests/GoogleSearchTest.
+
 But I know you will not. <3
