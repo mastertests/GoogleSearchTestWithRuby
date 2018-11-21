@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-main_page_url = 'http://www.google.com/'
+main_page_url = @main_page_url
 
 search_field_name_locator = 'q'
 search_result_title_locator = 'h3.LC20lb'
@@ -19,12 +19,12 @@ When(/^I press submit$/) do
 end
 
 Then(/^I should see "([^"]*)" in search results$/) do |term|
-  @result_list = []
-  @elements = @browser.find_elements css: search_result_title_locator
-  @elements.each do |element|
-    @result_list << element.text.include?(term)
+  result_list = Array[]
+  elements = @browser.find_elements css: search_result_title_locator
+  elements.each do |element|
+    result_list << element.text.include?(term)
   end
-  raise 'Fail because not all result contain search term text' if @result_list.size != @elements.size
+  raise 'Fail because not all result contain search term text' if result_list.size != elements.size
 end
 
 Then(/^I should see element with "([^"]*)" "([^"]*)"$/) do |locator_type, locator|
